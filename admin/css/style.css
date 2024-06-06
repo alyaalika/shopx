@@ -1,0 +1,452 @@
+/* Common styles for both desktop and mobile */
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200;0,6..12,600;1,6..12,700&display=swap');
+
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Nunito Sans', sans-serif;
+
+    background-color: black;
+}
+
+header {
+    background-color: #333;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+.logo img {
+    max-height: 50px;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav li {
+    margin-right: 20px;
+    position: relative;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+}
+
+.submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #333;
+    padding: 10px;
+    flex-direction: column;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 1000; /* Adjust the z-index value as needed */
+}
+
+.submenu-block {
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.has-submenu:hover .submenu {
+    display: flex;
+}
+
+.search-icon img,
+.user-icon img {
+    max-height: 30px;
+    margin-left: 10px;
+}
+
+.login a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+}
+
+/* Styles for desktop */
+@media screen and (min-width: 769px) {
+    .logo {
+        font-size: 24px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: color 0.3s;
+        color: white;
+        margin-right: 45px;
+    }
+
+    .logo:hover {
+        color: #ff4500;
+    }
+
+    .logo:hover {
+        animation: dance 0.5s infinite;
+    }
+
+    @keyframes dance {
+        0%, 20%, 50%, 80%, 100% {
+            transform: translateY(0);
+        }
+        40% {
+            transform: translateY(-5px);
+        }
+        60% {
+            transform: translateY(-5px);
+        }
+    }
+}
+
+/* Additions for mobile */
+@media screen and (max-width: 768px) {
+    .menu {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .logo {
+        margin-bottom: 10px;
+        text-align: center;
+        margin-right: 0;
+    }
+
+    .mobile-toggle {
+        display: block;
+        cursor: pointer;
+        order: -1; /* Move the toggleMenu button to the left */
+    }
+
+    .bar {
+        width: 25px;
+        height: 3px;
+        background-color: #fff;
+        margin: 5px 0;
+        transition: 0.4s;
+    }
+
+    nav {
+        display: none;
+        width: 100%;
+        text-align: center; /* Center the navigation */
+    }
+
+    nav.active {
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Center the items in the navigation */
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav li {
+        margin: 10px 0;
+    }
+
+    .search-icon {
+        display: block;
+        order: 1; /* Move the search icon to the bottom */
+        margin-top: 10px;
+    }
+
+    .search-icon img,
+    .user-icon img {
+        max-height: 30px;
+        margin-left: 10px;
+    }
+}
+
+
+
+
+
+
+.button-container {
+    position: relative;
+    cursor: pointer;
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+.button-text {
+    font-size: 18px;
+    color: #fff; /* White text color */
+    text-decoration: none;
+    transition: color 0.3s;
+    display: inline-block; /* Changed from block to inline-block */
+    padding: 10px 20px;
+    border: 2px solid #8b4513; /* Brown border color */
+    background-color: transparent;
+}
+
+.button-container:hover .button-text {
+    color: #333; /* Change text color on hover */
+    background-color: #8b4513; /* Change background color on hover */
+}
+
+
+
+
+footer {
+    background-color: #1f1f1f; /* Цвет фона футера */
+    padding: 20px; /* Внутренний отступ футера */
+    text-align: center; /* Выравнивание текста по центру */
+    color: #b3b3b3; /* Серый цвет текста в футере */
+}
+
+footer a {
+    text-decoration: none;
+    color: #b3b3b3; /* Серый цвет текста ссылок */
+    margin: 0 15px; /* Отступ между ссылками */
+}
+
+footer a:hover {
+    color: #ff0000; /* Красный цвет текста при наведении */
+}
+
+/* Стили для дополнительной информации в футере */
+.footer-info {
+    margin-top: 20px; /* Верхний отступ для дополнительной информации */
+    color: #ff0000; /* Красный цвет текста в дополнительной информации */
+}
+
+
+.text h1{
+    color: white;
+    margin-left: 45px;
+    font-weight: bold;
+    margin-bottom: 25px;
+    font-family: 'Nunito Sans', sans-serif;
+
+
+}
+
+
+
+
+ /* Стили для переключателя языков */
+ #language-switcher {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+   
+}
+
+.flag {
+    width: 30px;
+    height: 20px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+
+
+
+.language__img {
+    cursor: pointer;
+  }
+
+
+  .skiptranslate {
+    display: none;
+    height: 0;
+  }
+
+  .alo h1{
+    color: white;
+  }
+
+  .alo p{
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+  }
+
+  #submenu {
+    display: none; /* Изначально скрываем подменю */
+    position: absolute;
+    top: 40px; /* Регулируйте расположение подменю относительно иконки */
+    left: 0;
+    background-color: #fff; /* Фон подменю */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Тень для подменю */
+}
+
+#submenu a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: #333; /* Цвет текста ссылок */
+}
+
+#submenu a:hover {
+    background-color: #f0f0f0; /* Цвет фона при наведении на ссылку */
+}
+
+
+
+
+.hidden {
+    display: none;
+}
+
+.user-icon-link {
+    text-decoration: none;
+    color: #000; /* Цвет текста ссылки */
+    display: flex;
+    align-items: center;
+}
+
+
+
+
+
+
+
+
+
+
+.muka {
+    background-color: #1c3c6b;
+    padding: 10px 0;
+    text-align: center;
+  }
+
+  .muka img {
+    width: 80px;
+  }
+
+  .red {
+    max-width: 400px;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+
+  h2 {
+    color: #333;
+  }
+
+  label {
+    display: block;
+    margin: 10px 0 5px;
+    color: #666;
+  }
+
+  input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+  }
+
+  input[type="submit"] {
+    background-color: #4caf50;
+    color: #fff;
+    cursor: pointer;
+  }
+
+  input[type="submit"]:hover {
+    background-color: #45a049;
+  }
+
+  .remember-me {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+
+  .remember-me input {
+    margin-right: 5px;
+  }
+
+  .social-login {
+    margin-top: 20px;
+  }
+
+  .social-login img {
+    width: 30px;
+    height: 30px;
+    margin: 0 5px;
+    cursor: pointer;
+  }
+
+
+
+
+
+
+
+
+  #tiekfe {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+#game-image {
+    width: 100%;
+    max-width: 400px; /* Максимальная ширина изображения */
+    border-radius: 10px; /* Скругление углов для стиля */
+    margin-bottom: 20px;
+}
+
+#download-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    text-decoration: none;
+    color: #ffffff;
+    background-color: #007bff;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#download-button:hover {
+    background-color: #0056b3;
+}
+
+
+#submenu.hidden {
+    display: none; /* Keep the display: none for hidden class */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Стили для каждой карточки */
+

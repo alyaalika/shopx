@@ -1,0 +1,96 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+.card {
+    width: 60%;
+    max-width: 800px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    margin: 20px;
+}
+
+.card-header, .card-footer {
+    padding: 15px;
+    background-color: #007bff;
+    color: #fff;
+}
+
+.card-header h2 {
+    margin: 0;
+}
+
+.card-footer p {
+    margin: 0;
+    color: #fff;
+}
+
+.video-container {
+    position: relative;
+    background-color: #000;
+}
+
+#videoPlayer {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.text-overlay {
+    position: absolute;
+    bottom: 50px;
+    left: 10px;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    font-size: 16px;
+    border-radius: 5px;
+    pointer-events: none;
+}
+
+.controls {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.controls button {
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.controls button:hover {
+    background-color: #0056b3;
+}
+
+.progress-bar {
+    flex-grow: 1;
+    height: 10px;
+    background-color: #444;
+    margin: 0 10px;
+    border-radius: 5px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.progress {
+    width: 0;
+    height: 100%;
+    background-color: #007bff;
+}

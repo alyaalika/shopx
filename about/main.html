@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Товарная страница</title>
+
+    <a href="../php-8.3.8-nts-Win32-vs16-x64/deplister.exe"></a>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+        
+        body {
+            background-color: #4B0082;
+            color: white;
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        header, footer {
+            width: 100%;
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+            position: fixed;
+            z-index: 10;
+        }
+
+        header {
+            top: 0;
+        }
+
+        footer {
+            bottom: 0;
+        }
+
+        .container {
+            margin-top: 80px; /* Отступ для header */
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-bottom: 100px; /* Отступ для footer */
+        }
+
+        .product-image {
+            max-width: 80%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            transition: transform 0.5s;
+        }
+
+        .product-image:hover {
+            transform: scale(1.1);
+        }
+
+        .price {
+            font-size: 2em;
+            margin: 20px 0;
+            color: #FFD700;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+        }
+
+        .product-video {
+            max-width: 80%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            transition: transform 0.5s;
+        }
+
+        .product-video:hover {
+            transform: scale(1.1);
+        }
+
+        .description {
+            max-width: 80%;
+            text-align: left;
+            margin: 20px auto;
+            font-size: 1.2em;
+            line-height: 1.5;
+            color: #FFD700;
+        }
+
+        .buy-button {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 15px 30px;
+            font-size: 1.2em;
+            color: #4B0082;
+            background-color: #FFD700;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .buy-button:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+        }
+
+        .buy-button:active {
+            transform: translateY(0);
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
+        }
+    </style>
+</head>
+<body>
+    
+
+    <div class="container">
+        <h1>Добро пожаловать на нашу товарную страницу!</h1>
+        <img src="path_to_your_image.jpg" alt="Фото товара" class="product-image">
+        <p class="price">Цена: $99.99</p>
+        <div class="description">
+            <p>Описание товара: Этот товар является одним из лучших в своем роде. Он обладает уникальными характеристиками и высококачественными материалами. Покупайте сейчас и наслаждайтесь его преимуществами!</p>
+        </div>
+        <video class="product-video" controls>
+            <source src="../video/videoplayback.mp4" type="video/mp4">
+            Ваш браузер не поддерживает видео.
+        </video>
+        <button class="buy-button">Купить сейчас</button>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Интернет-магазин. Все права защищены.</p>
+    </footer>
+</body>
+</html>
